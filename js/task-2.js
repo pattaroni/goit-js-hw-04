@@ -5,7 +5,10 @@ function calcAverageCalories(days) {
   for (const day of days) {
     sum += day.calories;
   }
-  return sum / 7;
+  if (days.length < 1) {
+    return 0;
+  }
+  return sum / days.length;
 }
 
 console.log(
